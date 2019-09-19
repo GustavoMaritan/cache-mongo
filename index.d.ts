@@ -1,6 +1,7 @@
 declare namespace cacheConfig {
 
     type CacheManagerConfig = {
+        connectionString: String;
         user: String;
         password: String;
         server: String;
@@ -10,18 +11,20 @@ declare namespace cacheConfig {
         cacheLocked?: 'CachesLocked';
     }
 
-    class CacheManager {
-        static init(config: CacheManagerConfig, database?: String): void;
+    interface CacheFunctions {
+        get(action: Function, ...params: any): Promise<any>;
+        post(action: Function, ...params: any): Promise<any>;
+        put(action: Function, ...params: any): Promise<any>;
+        delete(action: Function, ...params: any): Promise<any>;
+        dropCache(): Promise<void>;
     }
 
-    class Cache {
-        constructor(name: String): void;
+    interface CacheManager {
+        init(config: CacheManagerConfig, database?: String): void;
+    }
 
-        get(action: Function, ...params: Any): Promise<Any>;
-        post(action: Function, ...params: Any): Promise<Any>;
-        put(action: Function, ...params: Any): Promise<Any>;
-        delete(action: Function, ...params: Any): Promise<Any>;
-        dropCache(): Promise<void>;
+    interface Cache {
+        new(name: String): CacheFunctions
     }
 
     interface CacheConfig {
