@@ -1,0 +1,21 @@
+{
+  "name": "cache-mongo",
+  "version": "0.0.1",
+  "description": "Controle de cache com mongodb",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoMaritan/cache-mongo.git"
+  },
+  "author": "Gustavo Maritan <gustavomaritan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^3.2.2"
+  }
+}
