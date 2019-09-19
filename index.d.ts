@@ -16,7 +16,6 @@ declare namespace cacheConfig {
         post(action: Function, ...params: any): Promise<any>;
         put(action: Function, ...params: any): Promise<any>;
         delete(action: Function, ...params: any): Promise<any>;
-        dropCache(): Promise<void>;
     }
 
     interface CacheManager {
