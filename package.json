@@ -1,6 +1,6 @@
 {
   "name": "cache-mongo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Controle de cache com mongodb",
   "main": "lib/index.js",
   "directories": {

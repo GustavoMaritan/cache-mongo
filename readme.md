@@ -7,6 +7,7 @@
 
     const { CacheManager } = require('cache-mongo');
 
+    // Dados para conexão com mongodb
     CacheManager.init({
         // --------------------------
         connectionString: 'mongodb://...',
